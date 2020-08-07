@@ -7,6 +7,16 @@ spring:
       url:jdbc:mysql://39.96.0.220:3306/test
       username:root
       password:root
+    application:
+      name: my-prometheus
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  metrics:
+    tags:
+      application: ${spring.application.name}
 jpa:
     hibernate:
       ddl-auto: update  # 第一次简表create  后面用update
