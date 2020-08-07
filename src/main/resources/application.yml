@@ -1,0 +1,18 @@
+my:
+ name: forezp
+ age: 12
+ number:  ${random.int}
+ uuid : ${random.uuid}
+ max: ${random.int(10)}
+ value: ${random.value}
+ greeting: hi,i'm  ${my.name}
+ 
+spring:
+    datasource:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://39.96.0.220:3306/test
+      username: root
+      password: root
+    profiles:
+      active: dev  
+
